@@ -1,7 +1,9 @@
 import "dotenv/config";
 import { configVariable, defineConfig } from "hardhat/config";
+import hardhatVerify from "@nomicfoundation/hardhat-verify";
 
 export default defineConfig({
+  plugins: [hardhatVerify],
   solidity: { version: "0.8.20" },
   networks: {
     amoy: {
